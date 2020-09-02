@@ -1,0 +1,20 @@
+<?php
+
+require 'app/tools/Debuging.php'; // Дебагинг
+
+use app\Application;
+
+spl_autoload_register(function($class) {
+    $path = str_replace('\\', '/', $class.'.php');
+    if (file_exists($path)) {
+        require $path;
+    }
+});
+
+
+$application = new Application;
+$application->run('start');
+
+// В файле categories.json отсутствует элемент с ID-13.
+
+?>
