@@ -13,9 +13,9 @@ class Application {
                     private $file  = 'categories.json'; // Для ручной обработки
                     private $children_row;
 
-                    public function __construct(string $row) {
+                    public function __construct(string $key) {
                       // $this->db = new DataBase;      Если требуется вывод json в БД
-                         $this->$children_row = $row;
+                         $this->$children_row = $key;
                     }
 
                     private function jsonToArray(array $data) {
