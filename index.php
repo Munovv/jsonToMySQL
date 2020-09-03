@@ -13,7 +13,7 @@ spl_autoload_register(function($class) {
 
 
 $application = new Application('childrens');
-$application->run('start');
+$application->run();
 
 // В файле categories.json отсутствует элемент с ID-13.
 
