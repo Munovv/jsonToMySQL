@@ -9,12 +9,12 @@ class Application {
                     public $db;
                     public $result;
 
-                    private $table = 'vla_main';
+                    private $table = 'vla_main';        // Таблица для заполнения
                     private $file  = 'categories.json'; // Для ручной обработки
-                    private $children_row;
+                    private $children_row;              // 
 
                     public function __construct(string $key) {
-                      // $this->db = new DataBase;      Если требуется вывод json в БД
+                      // $this->db = new DataBase;      // Если требуется вывод json в БД
                          $this->$children_row = $key;
                     }
 
@@ -55,7 +55,10 @@ class Application {
                     public function run() {
                       $json = json_decode(file_get_contents($this->file), true);
                       $convert_data = $this->jsonToArray($json);
-                      debug($convert_data);
+                      /*
+                      Работа с результатом...
+                      */
+                      debug($convert_data); // Проверка на работоспособность
                     }
 
 }
