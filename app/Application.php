@@ -2,7 +2,7 @@
 
 namespace app;
 
-use app\Db\DataBase;
+// use app\Db\DataBase; Если требуется вывод json в БД
 
 class Application {
 
